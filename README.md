@@ -1,49 +1,39 @@
 # App legal pages
 
-Static HTTPS pages for Apple App Store and Google Play (Privacy Policy, Terms, Support).
+Static HTTPS pages for Apple App Store and Google Play (Privacy Policy, Terms, Support) — plus a public developer profile.
 
 **Live site:** https://tung776.github.io/app-legal-pages/
 
-## Why one repo for many apps?
+| Page | URL |
+|---|---|
+| Hub | https://tung776.github.io/app-legal-pages/ |
+| Developer | https://tung776.github.io/app-legal-pages/about.html |
+| Calculator Privacy | https://tung776.github.io/app-legal-pages/apps/calculator/privacy.html?lang=en |
+| Calculator Support | https://tung776.github.io/app-legal-pages/apps/calculator/support.html?lang=en |
 
-Each future app gets its own folder under `apps/`. Store listings point at that app’s URLs. You do not need a paid domain — GitHub Pages subdomains are accepted by Apple and Google.
+## Developer
 
-| App | Privacy | Support |
-|---|---|---|
-| Calculator | [privacy](https://tung776.github.io/app-legal-pages/apps/calculator/privacy.html?lang=en) | [support](https://tung776.github.io/app-legal-pages/apps/calculator/support.html?lang=en) |
+- **Nguyễn Thanh Tùng** — independent software developer (freelancer), Vietnam
+- Master’s degree in Information Systems Management
+- Contact: thanhtung776@gmail.com · +84 916 678 845
+- GitHub: https://github.com/tung776
+
+Edit shared identity in `assets/developer.js` (hub/about) and each app’s `assets/site-config.js`.
 
 ## Add a new app
 
 ```bash
 cp -R _template apps/my-new-app
-# Edit apps/my-new-app/assets/site-config.js  (name + email)
-# Add apps/my-new-app/assets/legal-i18n.js   (copy from calculator, change app copy)
-# Link site-config.js in each HTML (already in template)
-# Add the app to the root index.html list
-git add apps/my-new-app index.html && git commit -m "Add legal pages for my-new-app" && git push
-```
-
-Store URL pattern:
-
-```text
-https://tung776.github.io/app-legal-pages/apps/<slug>/privacy.html?lang=en
-https://tung776.github.io/app-legal-pages/apps/<slug>/support.html?lang=en
+# Edit apps/my-new-app/assets/site-config.js
+# Add apps/my-new-app/assets/legal-i18n.js
+# Link the app in assets/hub.js (apps list) and push
 ```
 
 ## Calculator (Flutter)
 
-In the Calculator app, set:
-
 ```dart
 legalBaseUrl = 'https://tung776.github.io/app-legal-pages/apps/calculator';
 ```
-
-## Contact defaults
-
-Shared developer identity (override per app in `site-config.js`):
-
-- Name: Nguyễn Thanh Tùng
-- Email: thanhtung776@gmail.com
 
 ## Local preview
 

@@ -745,8 +745,10 @@ window.LEGAL_I18N = {
       title: 'Support',
       html: `
         <div class="card">
+          <p><strong>Developer:</strong> [YOUR LEGAL NAME]</p>
           <p><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></p>
-          <p class="muted">Replace this address with your real support inbox before App Store submission.</p>
+          <p><strong>Phone:</strong> <a href="[PHONE_HREF]">[PHONE]</a></p>
+          <p class="muted">I usually reply within 1–2 business days.</p>
         </div>
         <h2>Free trial &amp; unlock</h2>
         <ul>
@@ -766,8 +768,10 @@ window.LEGAL_I18N = {
       title: 'Hỗ trợ',
       html: `
         <div class="card">
+          <p><strong>Nhà phát triển:</strong> [YOUR LEGAL NAME]</p>
           <p><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></p>
-          <p class="muted">Thay địa chỉ này bằng hộp thư hỗ trợ thật trước khi nộp App Store.</p>
+          <p><strong>Điện thoại:</strong> <a href="[PHONE_HREF]">[PHONE]</a></p>
+          <p class="muted">Thường phản hồi trong 1–2 ngày làm việc.</p>
         </div>
         <h2>Dùng thử &amp; mở khóa</h2>
         <ul>
