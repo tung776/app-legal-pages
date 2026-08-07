@@ -23,13 +23,13 @@ window.DEVELOPER = {
   githubLabel: 'github.com/tung776',
   focus: {
     en: [
-      'EdTech (English learning)',
+      'English learning apps',
       'Xiangqi / Chinese chess',
       'Mobile utilities (iOS & Android)',
       'Flutter',
     ],
     vi: [
-      'EdTech (học tiếng Anh)',
+      'Ứng dụng học tiếng Anh',
       'Cờ tướng',
       'Tiện ích di động (iOS & Android)',
       'Flutter',
@@ -56,8 +56,8 @@ window.DEVELOPER = {
         vi: 'Ứng dụng học tiếng Anh dành cho học sinh từ tiểu học đến cấp 3 — lộ trình và luyện tập theo chương trình phổ thông.',
       },
       meta: {
-        en: 'EdTech · Author',
-        vi: 'EdTech · Tác giả',
+        en: 'English learning · School pathway',
+        vi: 'Học tiếng Anh · Phổ thông',
       },
     },
     {
@@ -68,8 +68,8 @@ window.DEVELOPER = {
         vi: 'Tiếng Anh cho người luyện thi IELTS và người muốn học lại sau khi mất gốc — luyện đề theo kỳ thi cùng phần nền tảng cho người mới bắt đầu lại.',
       },
       meta: {
-        en: 'EdTech · IELTS · Author',
-        vi: 'EdTech · IELTS · Tác giả',
+        en: 'English learning · IELTS',
+        vi: 'Học tiếng Anh · IELTS',
       },
     },
     {
@@ -79,12 +79,12 @@ window.DEVELOPER = {
         vi: 'Kỳ nghệ cờ tướng',
       },
       blurb: {
-        en: 'Xiangqi (Chinese chess) learning app: build opening/strategy “binh pháp”, follow player games, a library of 4.4M+ international master games, and AI practice powered by the Pikafish engine.',
-        vi: 'Ứng dụng dạy cờ tướng: xây dựng binh pháp, theo dõi ván đấu kỳ thủ, kho hơn 4,4 triệu ván đấu kỳ thủ quốc tế, và hệ thống AI luyện tập với máy dựa trên engine Pikafish.',
+        en: 'Xiangqi (Chinese chess) learning app: build opening/strategy “binh pháp”, follow player games, a library of 4.4M+ international master games, and on-device AI practice using the open-source Pikafish engine.',
+        vi: 'Ứng dụng dạy cờ tướng: xây dựng binh pháp, theo dõi ván đấu kỳ thủ, kho hơn 4,4 triệu ván đấu kỳ thủ quốc tế, và luyện tập với máy bằng engine mã nguồn mở Pikafish.',
       },
       meta: {
-        en: 'Xiangqi · AI (Pikafish) · Author',
-        vi: 'Cờ tướng · AI (Pikafish) · Tác giả',
+        en: 'Xiangqi teaching · AI practice',
+        vi: 'Dạy cờ tướng · Luyện với máy',
       },
     },
     {
@@ -95,8 +95,8 @@ window.DEVELOPER = {
         vi: 'Máy tính biểu thức trên iOS và Android — xem trước kết quả trực tiếp, lịch sử, và trang pháp lý trên site này.',
       },
       meta: {
-        en: 'Utility · Flutter · Legal pages here',
-        vi: 'Tiện ích · Flutter · Có trang pháp lý tại đây',
+        en: 'Utility · Flutter',
+        vi: 'Tiện ích · Flutter',
       },
       legalSlug: 'calculator',
     },
