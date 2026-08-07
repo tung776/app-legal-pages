@@ -44,13 +44,16 @@ window.DEVELOPER = {
     vi: 'Thường phản hồi trong 1–2 ngày làm việc',
   },
   /**
-   * Authored products (portfolio). Not every product has legal pages on this host yet.
-   * Keep claims factual; do not invent store URLs.
+   * Authored products (portfolio).
+   * image: path relative to site root
+   * links: external product / channel URLs
+   * legalSlug: when set, Privacy/Terms/Support live under apps/<slug>/
    */
   products: [
     {
       id: 'lumi-learning',
       name: { en: 'Lumi Learning', vi: 'Lumi Learning' },
+      image: './assets/products/lumi-learning.jpg',
       blurb: {
         en: 'English learning for students from primary school through high school — structured lessons and practice for the school pathway.',
         vi: 'Ứng dụng học tiếng Anh dành cho học sinh từ tiểu học đến cấp 3 — lộ trình và luyện tập theo chương trình phổ thông.',
@@ -59,10 +62,17 @@ window.DEVELOPER = {
         en: 'English learning · School pathway',
         vi: 'Học tiếng Anh · Phổ thông',
       },
+      links: [
+        {
+          label: { en: 'Website', vi: 'Trang web' },
+          href: 'https://lumi.kynghecotuong.vn/',
+        },
+      ],
     },
     {
       id: 'lumi-ielts',
       name: { en: 'Lumi IELTS', vi: 'Lumi IELTS' },
+      image: './assets/products/lumi-ielts.jpg',
       blurb: {
         en: 'English for IELTS candidates and for learners returning after a long break — exam-oriented practice plus foundations for beginners who feel “lost”.',
         vi: 'Tiếng Anh cho người luyện thi IELTS và người muốn học lại sau khi mất gốc — luyện đề theo kỳ thi cùng phần nền tảng cho người mới bắt đầu lại.',
@@ -71,6 +81,12 @@ window.DEVELOPER = {
         en: 'English learning · IELTS',
         vi: 'Học tiếng Anh · IELTS',
       },
+      links: [
+        {
+          label: { en: 'Website', vi: 'Trang web' },
+          href: 'https://lumi.kynghecotuong.vn/',
+        },
+      ],
     },
     {
       id: 'ky-nghe-co-tuong',
@@ -78,6 +94,7 @@ window.DEVELOPER = {
         en: 'Kỳ nghệ cờ tướng',
         vi: 'Kỳ nghệ cờ tướng',
       },
+      image: './assets/products/ky-nghe-co-tuong.jpg',
       blurb: {
         en: 'Xiangqi (Chinese chess) learning app: build opening/strategy “binh pháp”, follow player games, a library of 4.4M+ international master games, and on-device AI practice using the open-source Pikafish engine.',
         vi: 'Ứng dụng dạy cờ tướng: xây dựng binh pháp, theo dõi ván đấu kỳ thủ, kho hơn 4,4 triệu ván đấu kỳ thủ quốc tế, và luyện tập với máy bằng engine mã nguồn mở Pikafish.',
@@ -86,10 +103,21 @@ window.DEVELOPER = {
         en: 'Xiangqi teaching · AI practice',
         vi: 'Dạy cờ tướng · Luyện với máy',
       },
+      links: [
+        {
+          label: { en: 'Website', vi: 'Trang web' },
+          href: 'https://kynghecotuong.edu.vn/',
+        },
+        {
+          label: { en: 'YouTube', vi: 'YouTube' },
+          href: 'https://www.youtube.com/@kynghecotuong',
+        },
+      ],
     },
     {
       id: 'calculator',
       name: { en: 'Calculator', vi: 'Máy tính' },
+      image: './assets/products/calculator.jpg',
       blurb: {
         en: 'Handheld expression calculator for iOS and Android, with live preview, history, and store-ready legal pages on this site.',
         vi: 'Máy tính biểu thức trên iOS và Android — xem trước kết quả trực tiếp, lịch sử, và trang pháp lý trên site này.',
@@ -99,6 +127,13 @@ window.DEVELOPER = {
         vi: 'Tiện ích · Flutter',
       },
       legalSlug: 'calculator',
+      links: [
+        {
+          label: { en: 'Legal pages', vi: 'Trang pháp lý' },
+          href: './apps/calculator/index.html',
+          local: true,
+        },
+      ],
     },
   ],
 };

@@ -327,6 +327,30 @@ a:hover { opacity: 0.9; }
   font-weight: 500;
 }
 
+.product-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.product-card .product-media {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.product-card .product-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-soft);
+}
+
+.product-card .product-body {
+  padding: 16px 18px 18px;
+}
+
 .product-card .product-blurb {
   margin: 12px 0 0;
   color: var(--muted);
@@ -336,4 +360,14 @@ a:hover { opacity: 0.9; }
 
 .product-card .app-row {
   align-items: flex-start;
+}
+
+.product-card .app-links {
+  margin-top: 12px;
+}
+
+.product-card .legal-links {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
 }

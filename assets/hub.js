@@ -131,6 +131,18 @@
     return (product.meta && (product.meta[code] || product.meta.en)) || '';
   }
 
+  function linkLabel(link, code) {
+    if (!link) return '';
+    if (typeof link.label === 'string') return link.label;
+    return (link.label && (link.label[code] || link.label.en)) || 'Link';
+  }
+
+  function hrefWithLang(href, code, isLocal) {
+    if (!isLocal) return href;
+    const join = href.includes('?') ? '&' : '?';
+    return `${href}${join}lang=${code}`;
+  }
+
   function renderProductCards(code, opts) {
     const products = D.products || [];
     const filter = opts && opts.onlyLegal ? (p) => !!p.legalSlug : () => true;
@@ -139,24 +151,55 @@
     return products
       .filter(filter)
       .map((product) => {
+        const title = productName(product, code);
+        const img = product.image
+          ? `<a class="product-media" href="${
+              (product.links && product.links[0] && hrefWithLang(product.links[0].href, code, !!product.links[0].local)) ||
+              (product.legalSlug ? `./apps/${product.legalSlug}/index.html${qs}` : '#')
+            }" ${product.links && product.links[0] && !product.links[0].local ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+              <img src="${product.image}" alt="${title}" loading="lazy" width="768" height="512" />
+            </a>`
+          : '';
+
+        const external =
+          product.links && product.links.length
+            ? `<div class="app-links">
+            ${product.links
+              .map((link) => {
+                const local = !!link.local;
+                const href = hrefWithLang(link.href, code, local);
+                const extra = local
+                  ? ''
+                  : ' target="_blank" rel="noopener noreferrer"';
+                return `<a href="${href}"${extra}>${linkLabel(link, code)}</a>`;
+              })
+              .join('')}
+          </div>`
+            : '';
+
         const legal =
           product.legalSlug != null
-            ? `<div class="app-links">
+            ? `<div class="app-links legal-links">
             <a href="./apps/${product.legalSlug}/index.html${qs}">${c.home}</a>
             <a href="./apps/${product.legalSlug}/privacy.html${qs}">${c.privacy}</a>
             <a href="./apps/${product.legalSlug}/support.html${qs}">${c.support}</a>
             <a href="./apps/${product.legalSlug}/terms.html${qs}">${c.terms}</a>
           </div>`
             : '';
+
         return `<article class="card product-card">
-          <div class="app-row">
-            <div>
-              <strong>${productName(product, code)}</strong>
-              <p class="meta-line" style="margin:6px 0 0">${productMeta(product, code)}</p>
+          ${img}
+          <div class="product-body">
+            <div class="app-row">
+              <div>
+                <strong>${title}</strong>
+                <p class="meta-line" style="margin:6px 0 0">${productMeta(product, code)}</p>
+              </div>
             </div>
+            <p class="product-blurb">${productBlurb(product, code)}</p>
+            ${external}
             ${legal}
           </div>
-          <p class="product-blurb">${productBlurb(product, code)}</p>
         </article>`;
       })
       .join('');
