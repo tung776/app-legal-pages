@@ -2,34 +2,38 @@
   const D = window.DEVELOPER;
   const copy = {
     en: {
-      brand: 'Legal & support',
+      brand: 'Nguyễn Thanh Tùng',
       navHome: 'Apps',
       navAbout: 'Developer',
       language: 'Language',
-      kicker: 'Developer · Vietnam',
+      kicker: 'App author · Vietnam',
       heroTitle: D.fullName,
       heroLead:
-        'Independent software developer building focused mobile utilities for App Store and Google Play. Clear policies, reachable support, and apps that respect on-device privacy.',
+        'Independent developer and author of education and game-learning apps — including Lumi Learning, Lumi IELTS, and Kỳ nghệ cờ tướng — plus focused utilities for App Store and Google Play. This site hosts public Privacy, Terms, and Support pages.',
       ctaAbout: 'About the developer',
-      ctaApps: 'View apps',
-      appsTitle: 'Published apps',
-      appsLead: 'Each app has its own Privacy Policy, Terms, and Support pages for store listings.',
+      ctaApps: 'View products',
+      appsTitle: 'Products & legal pages',
+      appsLead:
+        'Portfolio of apps I author. Calculator includes store legal pages on this host; other products are listed for identity and trust.',
+      portfolioTitle: 'Authored products',
+      legalTitle: 'Store legal pages',
+      legalLead: 'Use these HTTPS URLs in App Store Connect / Google Play Console.',
       privacy: 'Privacy',
       support: 'Support',
       terms: 'Terms',
       home: 'Home',
       aboutTitle: 'About the developer',
       aboutLead:
-        'I design and ship small, reliable mobile applications as an independent developer. This site hosts the public legal and support pages required by Apple and Google.',
+        'I build and ship learning and utility apps as an independent author. Best known for Lumi (English learning), Kỳ nghệ cờ tướng (Xiangqi with a large game library and Pikafish-based AI), and smaller utilities such as Calculator. This site keeps Privacy Policy and Support pages public for store review.',
       profileTitle: 'Profile',
+      productsTitle: 'Selected products',
       contactTitle: 'Contact',
-      focusTitle: 'Focus',
       valuesTitle: 'How I work',
       valuesHtml: `
         <ul>
-          <li>Privacy-first defaults: keep user data on-device whenever possible.</li>
-          <li>Straightforward store disclosures — Privacy Policy and Support stay public and up to date.</li>
-          <li>Direct support for customers without a ticket maze.</li>
+          <li>Ship real products for learners and players — not demos only.</li>
+          <li>Privacy-first defaults when the product allows on-device data.</li>
+          <li>Public, stable Privacy Policy and Support URLs for Apple and Google.</li>
         </ul>`,
       labelRole: 'Role',
       labelEducation: 'Education',
@@ -43,34 +47,38 @@
       footer: 'Public legal pages for App Store & Google Play · No account required to view.',
     },
     vi: {
-      brand: 'Pháp lý & hỗ trợ',
+      brand: 'Nguyễn Thanh Tùng',
       navHome: 'Ứng dụng',
       navAbout: 'Nhà phát triển',
       language: 'Ngôn ngữ',
-      kicker: 'Nhà phát triển · Việt Nam',
+      kicker: 'Tác giả ứng dụng · Việt Nam',
       heroTitle: D.fullName,
       heroLead:
-        'Lập trình viên freelancer xây dựng ứng dụng tiện ích trên App Store và Google Play. Chính sách rõ ràng, hỗ trợ liên hệ được, tôn trọng quyền riêng tư trên thiết bị.',
+        'Lập trình viên độc lập, tác giả các ứng dụng học tập và luyện kỹ năng — gồm Lumi Learning, Lumi IELTS và Kỳ nghệ cờ tướng — cùng các tiện ích trên App Store / Google Play. Site này cung cấp trang Privacy, Terms và Support công khai.',
       ctaAbout: 'Giới thiệu nhà phát triển',
-      ctaApps: 'Xem ứng dụng',
-      appsTitle: 'Ứng dụng đã phát hành',
-      appsLead: 'Mỗi app có trang Privacy, Terms và Support riêng để khai báo trên store.',
+      ctaApps: 'Xem sản phẩm',
+      appsTitle: 'Sản phẩm & trang pháp lý',
+      appsLead:
+        'Các ứng dụng tôi là tác giả. Máy tính (Calculator) có trang pháp lý trên host này; các sản phẩm khác được liệt kê để xác nhận danh tính.',
+      portfolioTitle: 'Sản phẩm đã phát triển',
+      legalTitle: 'Trang pháp lý trên store',
+      legalLead: 'Dùng các URL HTTPS này trong App Store Connect / Google Play Console.',
       privacy: 'Privacy',
       support: 'Support',
       terms: 'Terms',
       home: 'Trang chủ',
       aboutTitle: 'Giới thiệu nhà phát triển',
       aboutLead:
-        'Tôi thiết kế và phát hành ứng dụng di động gọn, ổn định với tư cách lập trình viên độc lập. Trang này chứa các tài liệu pháp lý và hỗ trợ công khai theo yêu cầu của Apple và Google.',
+        'Tôi xây dựng và phát hành ứng dụng học tập cũng như tiện ích với tư cách tác giả độc lập. Được biết đến với Lumi (học tiếng Anh), Kỳ nghệ cờ tướng (kho ván đấu lớn và AI dựa trên Pikafish), cùng các tiện ích như Máy tính. Site này giữ Privacy Policy và Support công khai phục vụ review store.',
       profileTitle: 'Hồ sơ',
+      productsTitle: 'Một số sản phẩm',
       contactTitle: 'Liên hệ',
-      focusTitle: 'Hướng làm việc',
       valuesTitle: 'Cách làm việc',
       valuesHtml: `
         <ul>
-          <li>Ưu tiên quyền riêng tư: lưu dữ liệu trên thiết bị khi có thể.</li>
-          <li>Khai báo store minh bạch — Privacy Policy và Support luôn công khai, cập nhật.</li>
-          <li>Hỗ trợ trực tiếp, không vòng vo ticket.</li>
+          <li>Phát hành sản phẩm thật cho người học và người chơi — không chỉ bản demo.</li>
+          <li>Ưu tiên quyền riêng tư khi sản phẩm cho phép lưu trên thiết bị.</li>
+          <li>URL Privacy Policy và Support ổn định, công khai cho Apple và Google.</li>
         </ul>`,
       labelRole: 'Vai trò',
       labelEducation: 'Học vấn',
@@ -111,6 +119,49 @@
     return D.role[code] || D.role.en;
   }
 
+  function productName(product, code) {
+    return (product.name && (product.name[code] || product.name.en)) || product.id;
+  }
+
+  function productBlurb(product, code) {
+    return (product.blurb && (product.blurb[code] || product.blurb.en)) || '';
+  }
+
+  function productMeta(product, code) {
+    return (product.meta && (product.meta[code] || product.meta.en)) || '';
+  }
+
+  function renderProductCards(code, opts) {
+    const products = D.products || [];
+    const filter = opts && opts.onlyLegal ? (p) => !!p.legalSlug : () => true;
+    const qs = `?lang=${code}`;
+    const c = t(code);
+    return products
+      .filter(filter)
+      .map((product) => {
+        const legal =
+          product.legalSlug != null
+            ? `<div class="app-links">
+            <a href="./apps/${product.legalSlug}/index.html${qs}">${c.home}</a>
+            <a href="./apps/${product.legalSlug}/privacy.html${qs}">${c.privacy}</a>
+            <a href="./apps/${product.legalSlug}/support.html${qs}">${c.support}</a>
+            <a href="./apps/${product.legalSlug}/terms.html${qs}">${c.terms}</a>
+          </div>`
+            : '';
+        return `<article class="card product-card">
+          <div class="app-row">
+            <div>
+              <strong>${productName(product, code)}</strong>
+              <p class="meta-line" style="margin:6px 0 0">${productMeta(product, code)}</p>
+            </div>
+            ${legal}
+          </div>
+          <p class="product-blurb">${productBlurb(product, code)}</p>
+        </article>`;
+      })
+      .join('');
+  }
+
   function renderNav(page, code) {
     const c = t(code);
     const qs = `?lang=${code}`;
@@ -141,7 +192,7 @@
   function renderHome(code) {
     const c = t(code);
     const qs = `?lang=${code}`;
-    document.title = `${D.fullName} · ${c.brand}`;
+    document.title = `${D.fullName} · Apps & legal`;
     document.getElementById('content').innerHTML = `
       <header class="hero">
         <p class="kicker">${c.kicker}</p>
@@ -149,25 +200,20 @@
         <p class="lead">${c.heroLead}</p>
         <div class="actions">
           <a class="btn btn-primary" href="./about.html${qs}">${c.ctaAbout}</a>
-          <a class="btn" href="#apps">${c.ctaApps}</a>
+          <a class="btn" href="#products">${c.ctaApps}</a>
         </div>
       </header>
 
-      <section class="section" id="apps">
-        <h2>${c.appsTitle}</h2>
+      <section class="section" id="products">
+        <h2>${c.portfolioTitle}</h2>
         <p class="meta-line">${c.appsLead}</p>
-        <div class="card app-row">
-          <div>
-            <strong>Calculator</strong>
-            <p class="meta-line" style="margin:6px 0 0">Flutter · iOS &amp; Android</p>
-          </div>
-          <div class="app-links">
-            <a href="./apps/calculator/index.html${qs}">${c.home}</a>
-            <a href="./apps/calculator/privacy.html${qs}">${c.privacy}</a>
-            <a href="./apps/calculator/support.html${qs}">${c.support}</a>
-            <a href="./apps/calculator/terms.html${qs}">${c.terms}</a>
-          </div>
-        </div>
+        ${renderProductCards(code, { onlyLegal: false })}
+      </section>
+
+      <section class="section" id="legal">
+        <h2>${c.legalTitle}</h2>
+        <p class="meta-line">${c.legalLead}</p>
+        ${renderProductCards(code, { onlyLegal: true })}
       </section>
 
       <footer class="footer">${c.footer}</footer>`;
@@ -215,6 +261,11 @@
             <p class="value">${D.response[code] || D.response.en}</p>
           </div>
         </div>
+      </section>
+
+      <section class="section" id="products">
+        <h2>${c.productsTitle}</h2>
+        ${renderProductCards(code, { onlyLegal: false })}
       </section>
 
       <section class="section prose">
