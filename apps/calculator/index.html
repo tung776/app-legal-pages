@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Calculator — realtime expression calculator for iOS and Android. Privacy Policy, Terms, and Support." />
   <title>Calculator</title>
   <link rel="stylesheet" href="./assets/styles.css" />
 </head>
@@ -13,9 +14,33 @@
       <select id="lang-select" aria-label="Language"></select>
     </div>
     <nav id="nav"></nav>
-    <h1 id="page-title">Calculator</h1>
-    <p id="page-lead"></p>
-    <ul id="home-links"></ul>
+
+    <section class="home-hero">
+      <img
+        class="home-cover"
+        src="./assets/cover.jpg"
+        width="768"
+        height="512"
+        alt="Calculator"
+        id="home-cover"
+      />
+      <p class="home-kicker" id="home-kicker"></p>
+      <h1 id="page-title">Calculator</h1>
+      <p id="page-lead" class="home-lead"></p>
+      <div class="home-actions" id="home-actions"></div>
+    </section>
+
+    <section class="home-section">
+      <h2 id="features-title"></h2>
+      <div class="feature-grid" id="home-features"></div>
+    </section>
+
+    <section class="home-section">
+      <h2 id="legal-title"></h2>
+      <div class="legal-grid" id="home-legal"></div>
+    </section>
+
+    <div id="dev-card" class="card"></div>
   </main>
   <script src="./assets/site-config.js"></script>
   <script src="./assets/legal-i18n.js"></script>

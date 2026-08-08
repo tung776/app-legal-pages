@@ -70,6 +70,98 @@
     });
   }
 
+  function renderDevCard(cardEl, common, lang) {
+    if (!cardEl) return;
+    const phone = SITE.contactPhoneDisplay || SITE.contactPhone;
+    cardEl.innerHTML = `
+      <p class="dev-card-title">${common.developer}</p>
+      <p class="dev-card-name">${SITE.developerName}</p>
+      <p class="dev-card-role">${roleFor(lang)}</p>
+      <ul class="dev-card-lines">
+        <li>
+          <span class="label">${common.contact}</span>
+          <a href="mailto:${SITE.contactEmail}">${SITE.contactEmail}</a>
+        </li>
+        <li>
+          <span class="label">${lang === 'vi' ? 'Điện thoại' : 'Phone'}</span>
+          <a href="${SITE.contactPhoneHref}">${phone}</a>
+        </li>
+        <li>
+          <span class="label">GitHub</span>
+          <a href="${SITE.githubUrl}" rel="noopener noreferrer">github.com/tung776</a>
+        </li>
+        <li>
+          <span class="label">${lang === 'vi' ? 'Hồ sơ' : 'Profile'}</span>
+          <a href="${aboutHref(lang)}">${lang === 'vi' ? 'Xem giới thiệu' : 'About the developer'}</a>
+        </li>
+      </ul>
+    `;
+  }
+
+  function renderHomeExtras(content, common, lang) {
+    const home = Object.assign({}, t(I18N.home, 'en'), content);
+
+    const kicker = document.getElementById('home-kicker');
+    if (kicker) kicker.textContent = home.kicker || '';
+
+    const cover = document.getElementById('home-cover');
+    if (cover) cover.alt = home.title || common.appName;
+
+    const actions = document.getElementById('home-actions');
+    if (actions) {
+      actions.innerHTML = `
+        <a class="btn btn-primary" href="./privacy.html?lang=${lang}">${home.ctaPrivacy || common.privacy}</a>
+        <a class="btn" href="./support.html?lang=${lang}">${home.ctaSupport || common.support}</a>
+      `;
+    }
+
+    const featuresTitle = document.getElementById('features-title');
+    if (featuresTitle) {
+      featuresTitle.textContent = home.featuresTitle || 'Highlights';
+    }
+
+    const featuresEl = document.getElementById('home-features');
+    if (featuresEl) {
+      const features = home.features || t(I18N.home, 'en').features || [];
+      featuresEl.innerHTML = features
+        .map(
+          (item) => `<article class="feature-card">
+            <h3>${item.title}</h3>
+            <p>${item.text}</p>
+          </article>`,
+        )
+        .join('');
+    }
+
+    const legalTitle = document.getElementById('legal-title');
+    if (legalTitle) {
+      legalTitle.textContent = home.legalTitle || 'Legal & support';
+    }
+
+    const legalEl = document.getElementById('home-legal');
+    if (legalEl) {
+      const aboutLabel = lang === 'vi' ? 'Nhà phát triển' : 'Developer';
+      legalEl.innerHTML = `
+        <a class="legal-card" href="./privacy.html?lang=${lang}">
+          <strong>${home.ctaPrivacy || common.privacy}</strong>
+          <span>${lang === 'vi' ? 'Chính sách công khai cho App Store / Google Play' : 'Public policy for App Store / Google Play'}</span>
+        </a>
+        <a class="legal-card" href="./terms.html?lang=${lang}">
+          <strong>${home.ctaTerms || common.terms}</strong>
+          <span>${lang === 'vi' ? 'Điều khoản sử dụng ứng dụng' : 'Terms for using the app'}</span>
+        </a>
+        <a class="legal-card" href="./support.html?lang=${lang}">
+          <strong>${home.ctaSupport || common.support}</strong>
+          <span>${lang === 'vi' ? 'Email, điện thoại và hướng dẫn mua hàng' : 'Email, phone, and purchase help'}</span>
+        </a>
+        <a class="legal-card" href="${aboutHref(lang)}">
+          <strong>${aboutLabel}</strong>
+          <span>${SITE.developerName}</span>
+        </a>
+      `;
+    }
+  }
+
   function render() {
     const page = document.body.dataset.page || 'home';
     let lang = setLang(queryLang());
@@ -130,33 +222,7 @@
     const noteEl = document.getElementById('placeholder-note');
     if (noteEl) noteEl.textContent = '';
 
-    const cardEl = document.getElementById('dev-card');
-    if (cardEl) {
-      const phone = SITE.contactPhoneDisplay || SITE.contactPhone;
-      cardEl.innerHTML = `
-        <p class="dev-card-title">${common.developer}</p>
-        <p class="dev-card-name">${SITE.developerName}</p>
-        <p class="dev-card-role">${roleFor(lang)}</p>
-        <ul class="dev-card-lines">
-          <li>
-            <span class="label">${common.contact}</span>
-            <a href="mailto:${SITE.contactEmail}">${SITE.contactEmail}</a>
-          </li>
-          <li>
-            <span class="label">${lang === 'vi' ? 'Điện thoại' : 'Phone'}</span>
-            <a href="${SITE.contactPhoneHref}">${phone}</a>
-          </li>
-          <li>
-            <span class="label">GitHub</span>
-            <a href="${SITE.githubUrl}" rel="noopener noreferrer">github.com/tung776</a>
-          </li>
-          <li>
-            <span class="label">${lang === 'vi' ? 'Hồ sơ' : 'Profile'}</span>
-            <a href="${aboutHref(lang)}">${lang === 'vi' ? 'Xem giới thiệu' : 'About the developer'}</a>
-          </li>
-        </ul>
-      `;
-    }
+    renderDevCard(document.getElementById('dev-card'), common, lang);
 
     const bodyEl = document.getElementById('page-body');
     if (bodyEl) {
@@ -164,14 +230,8 @@
       bindLangLinks(bodyEl, lang);
     }
 
-    const homeLinks = document.getElementById('home-links');
-    if (homeLinks) {
-      homeLinks.innerHTML = `
-        <li><a href="./privacy.html?lang=${lang}">${common.privacy}</a></li>
-        <li><a href="./terms.html?lang=${lang}">${common.terms}</a></li>
-        <li><a href="./support.html?lang=${lang}">${common.support}</a></li>
-        <li><a href="${aboutHref(lang)}">${lang === 'vi' ? 'Nhà phát triển' : 'Developer'}</a></li>
-      `;
+    if (page === 'home') {
+      renderHomeExtras(content, common, lang);
     }
 
     let footer = document.getElementById('site-footer');

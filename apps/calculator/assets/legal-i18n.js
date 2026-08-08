@@ -194,68 +194,182 @@ window.LEGAL_I18N = {
   P.home = {
     en: {
       title: 'Calculator',
+      kicker: 'iOS & Android · Expression calculator',
       lead:
-        'Realtime expression calculator for Android and iOS. 7-day free trial, then a one-time unlock via the App Store or Google Play.',
+        'Type full formulas with a live result preview. Smart parentheses, history, themes, and multi-language settings — with a 7-day free trial, then a one-time unlock on the App Store or Google Play.',
+      featuresTitle: 'Highlights',
+      legalTitle: 'Legal & support',
+      ctaPrivacy: 'Privacy Policy',
+      ctaSupport: 'Get support',
+      ctaTerms: 'Terms of Use',
+      features: [
+        {
+          title: 'Live preview',
+          text: 'See results update as you edit the expression — no need to tap Equals every time.',
+        },
+        {
+          title: 'Smart input',
+          text: 'Unbalanced parentheses and common typing slips are corrected while you type.',
+        },
+        {
+          title: 'History & themes',
+          text: 'Keep recent calculations, switch themes, and choose your preferred language.',
+        },
+        {
+          title: 'On-device privacy',
+          text: 'Settings and history stay on your device. No developer account required.',
+        },
+      ],
     },
     vi: {
       title: 'Máy tính',
+      kicker: 'iOS & Android · Máy tính biểu thức',
       lead:
-        'Máy tính biểu thức realtime cho Android và iOS. Dùng thử miễn phí 7 ngày, sau đó mở khóa một lần qua App Store hoặc Google Play.',
+        'Nhập cả công thức với kết quả xem trước trực tiếp. Sửa ngoặc thông minh, lịch sử, theme và đa ngôn ngữ — dùng thử 7 ngày miễn phí, sau đó mở khóa một lần trên App Store hoặc Google Play.',
+      featuresTitle: 'Điểm nổi bật',
+      legalTitle: 'Pháp lý & hỗ trợ',
+      ctaPrivacy: 'Chính sách quyền riêng tư',
+      ctaSupport: 'Liên hệ hỗ trợ',
+      ctaTerms: 'Điều khoản sử dụng',
+      features: [
+        {
+          title: 'Xem trước trực tiếp',
+          text: 'Kết quả cập nhật khi bạn sửa biểu thức — không cần bấm bằng mỗi lần.',
+        },
+        {
+          title: 'Nhập liệu thông minh',
+          text: 'Tự sửa ngoặc thiếu/thừa và một số lỗi gõ thường gặp khi đang nhập.',
+        },
+        {
+          title: 'Lịch sử & giao diện',
+          text: 'Lưu phép tính gần đây, đổi theme và chọn ngôn ngữ ưa thích.',
+        },
+        {
+          title: 'Riêng tư trên máy',
+          text: 'Cài đặt và lịch sử chỉ lưu trên thiết bị. Không cần tài khoản nhà phát triển.',
+        },
+      ],
     },
     zh: {
       title: '计算器',
+      kicker: 'iOS & Android',
       lead:
         '适用于 Android 与 iOS 的实时表达式计算器。提供 7 天免费试用，之后可通过 App Store 或 Google Play 一次性解锁。',
+      featuresTitle: '亮点',
+      legalTitle: '法律与支持',
+      ctaPrivacy: '隐私政策',
+      ctaSupport: '支持',
+      ctaTerms: '使用条款',
     },
     th: {
       title: 'เครื่องคิดเลข',
+      kicker: 'iOS & Android',
       lead:
         'เครื่องคิดเลขนิพจน์แบบเรียลไทม์สำหรับ Android และ iOS ทดลองใช้ฟรี 7 วัน จากนั้นปลดล็อกครั้งเดียวผ่าน App Store หรือ Google Play',
+      featuresTitle: 'ไฮไลต์',
+      legalTitle: 'กฎหมายและการสนับสนุน',
+      ctaPrivacy: 'นโยบายความเป็นส่วนตัว',
+      ctaSupport: 'ฝ่ายสนับสนุน',
+      ctaTerms: 'ข้อกำหนดการใช้งาน',
     },
     id: {
       title: 'Kalkulator',
+      kicker: 'iOS & Android',
       lead:
         'Kalkulator ekspresi realtime untuk Android dan iOS. Uji coba gratis 7 hari, lalu buka kunci sekali lewat App Store atau Google Play.',
+      featuresTitle: 'Sorotan',
+      legalTitle: 'Legal & dukungan',
+      ctaPrivacy: 'Kebijakan Privasi',
+      ctaSupport: 'Dukungan',
+      ctaTerms: 'Syarat Penggunaan',
     },
     fr: {
       title: 'Calculatrice',
+      kicker: 'iOS & Android',
       lead:
         'Calculatrice d’expressions en temps réel pour Android et iOS. Essai gratuit de 7 jours, puis déverrouillage unique via l’App Store ou Google Play.',
+      featuresTitle: 'Points forts',
+      legalTitle: 'Mentions légales',
+      ctaPrivacy: 'Politique de confidentialité',
+      ctaSupport: 'Assistance',
+      ctaTerms: "Conditions d'utilisation",
     },
     es: {
       title: 'Calculadora',
+      kicker: 'iOS & Android',
       lead:
         'Calculadora de expresiones en tiempo real para Android e iOS. Prueba gratuita de 7 días y luego desbloqueo único en App Store o Google Play.',
+      featuresTitle: 'Destacados',
+      legalTitle: 'Legal y soporte',
+      ctaPrivacy: 'Política de privacidad',
+      ctaSupport: 'Soporte',
+      ctaTerms: 'Términos de uso',
     },
     pt: {
       title: 'Calculadora',
+      kicker: 'iOS & Android',
       lead:
         'Calculadora de expressões em tempo real para Android e iOS. Teste grátis de 7 dias e depois desbloqueio único via App Store ou Google Play.',
+      featuresTitle: 'Destaques',
+      legalTitle: 'Legal e suporte',
+      ctaPrivacy: 'Política de Privacidade',
+      ctaSupport: 'Suporte',
+      ctaTerms: 'Termos de Uso',
     },
     it: {
       title: 'Calcolatrice',
+      kicker: 'iOS & Android',
       lead:
         'Calcolatrice di espressioni in tempo reale per Android e iOS. Prova gratuita di 7 giorni, poi sblocco una tantum tramite App Store o Google Play.',
+      featuresTitle: 'In evidenza',
+      legalTitle: 'Legale e supporto',
+      ctaPrivacy: 'Informativa sulla privacy',
+      ctaSupport: 'Supporto',
+      ctaTerms: "Termini d'uso",
     },
     de: {
       title: 'Rechner',
+      kicker: 'iOS & Android',
       lead:
         'Echtzeit-Ausdrucksrechner für Android und iOS. 7 Tage kostenlos testen, danach einmalige Freischaltung über App Store oder Google Play.',
+      featuresTitle: 'Highlights',
+      legalTitle: 'Rechtliches & Support',
+      ctaPrivacy: 'Datenschutzrichtlinie',
+      ctaSupport: 'Support',
+      ctaTerms: 'Nutzungsbedingungen',
     },
     ja: {
       title: '電卓',
+      kicker: 'iOS & Android',
       lead:
         'Android / iOS 向けのリアルタイム式電卓。7日間の無料トライアルの後、App Store または Google Play で一度だけアンロックできます。',
+      featuresTitle: 'ハイライト',
+      legalTitle: '法務とサポート',
+      ctaPrivacy: 'プライバシーポリシー',
+      ctaSupport: 'サポート',
+      ctaTerms: '利用規約',
     },
     ko: {
       title: '계산기',
+      kicker: 'iOS & Android',
       lead:
         'Android와 iOS용 실시간 수식 계산기. 7일 무료 체험 후 App Store 또는 Google Play에서 일회성으로 잠금 해제합니다.',
+      featuresTitle: '하이라이트',
+      legalTitle: '법률 및 지원',
+      ctaPrivacy: '개인정보 처리방침',
+      ctaSupport: '지원',
+      ctaTerms: '이용약관',
     },
     ru: {
       title: 'Калькулятор',
+      kicker: 'iOS & Android',
       lead:
         'Калькулятор выражений в реальном времени для Android и iOS. 7 дней бесплатно, затем разовая разблокировка через App Store или Google Play.',
+      featuresTitle: 'Возможности',
+      legalTitle: 'Правовая информация',
+      ctaPrivacy: 'Политика конфиденциальности',
+      ctaSupport: 'Поддержка',
+      ctaTerms: 'Условия использования',
     },
   };
 
